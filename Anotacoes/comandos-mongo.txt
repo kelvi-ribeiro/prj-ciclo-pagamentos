@@ -1,0 +1,24 @@
+Comando Importantes
+
+Filtrar para vir apenas o atributo selecionado:
+db.billingCycles.find({credits:{$exists:true}},{_id:0,name:1,month:1})
+
+
+Atualizando Documento:
+db.billingCycles.update( {$and:[{month:1},{year:2017}]}, {$set:{credits:[{name:"Salário",value:5000}]}})
+
+
+Agregação:
+db.billingCycles.aggregate([{ $project:{credit:{$sum:"$credits.value"},debt:{$sum:"$debts.value"}} , },{ $group:{_id:null,credit:{$sum:"$credit"},debit:{$sum:"$debit"}} }])
+
+Útil para fazer busca paginada:
+db.billingCycles.find({year:2017}).skip(1).limit(1)
+db.billingCycles.count()
+
+Remover Documento:
+db.billingCycles.remove({month:2})
+db.billingCycles.remove({year:2017},1) // Remove apenas um registro
+
+
+
+

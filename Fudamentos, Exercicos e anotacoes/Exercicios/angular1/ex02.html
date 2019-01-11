@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app='app' lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fundamentos de Angular</title>
+    <script text="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script text="text/javascript">
+        angular.module('app',[])
+     </script>
+</head>
+<body>
+   <h1> Normal Binding <span style="color:red;">{{value}}</span></h1>
+   <h1>One Time Binding <span style="color:red;">{{::value}}</span></h1>
+   <input type="text" ng-model="value">
+</body>
+</html>

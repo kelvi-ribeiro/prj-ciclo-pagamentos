@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app='app' lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fundamentos de Angular</title>
+    <script text="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script text="text/javascript">
+        angular.module('app',[])
+        angular.module('app').controller('MenuController',[
+          '$scope',
+          function($scope){
+              $scope.value = 10;
+              $scope.inc = function(){
+                  $scope.value++;
+              }
+          }  
+        ])
+     </script>
+</head>
+<body>
+    <div ng-controller="MenuController">
+        <h1>{{value}}</h1>
+        <input  ng-model="value">
+        <button ng-click="inc()">Inc</button>
+    </div>
+</body>
+</html>

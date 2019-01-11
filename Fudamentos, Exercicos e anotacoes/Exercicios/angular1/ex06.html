@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='app' lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fundamentos de Angular</title>
+    <script text="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script text="text/javascript">
+        angular.module('app',[])
+        angular.module('app').factory('utils', function(){
+            function upper(input){
+                return input.toUpperCase();
+            }
+            return {upper};
+        });
+        angular.module('app').controller('MenuController',[
+            'utils',
+            function(utils){          
+                const self = this;      
+                self.value = utils.upper('texto');
+            }
+        ])
+     </script>
+</head>
+<body>
+    <div ng-controller="MenuController as ctrl">
+        <h1>{{ctrl.value}}</h1>
+    </div>
+</body>
+</html>

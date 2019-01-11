@@ -1,0 +1,14 @@
+{
+  "name": "exercicios-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kelvi Martins Ribeiro",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.0"
+  }
+}

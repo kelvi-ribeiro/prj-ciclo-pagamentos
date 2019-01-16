@@ -5,7 +5,7 @@
   "main": "loader.js",
   "scripts": {
     "dev": "nodemon",
-    "production":"ps2 start loader.js --name backend"
+    "production": "ps2 start loader.js --name backend"
   },
   "author": "Kelvi Martins Ribeiro",
   "license": "MIT",

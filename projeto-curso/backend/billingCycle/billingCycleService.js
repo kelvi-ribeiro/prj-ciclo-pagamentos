@@ -1,5 +1,4 @@
 const BillingCycle = require('./billingCycle');
-const _ = require('lodash');
 BillingCycle.methods(['get','post','put','delete']);
 BillingCycle.updateOptions({new:true,runValidators:true});
 
@@ -16,8 +15,10 @@ function sendErrorsOrNext(req,res,next){
 }
 
 function parseErrors(nodeRestfulErrors){
-      const errors = [];
-      _.forIn(nodeRestfulErrors,error => errors.push(error.message))
+    const errors = [];
+    Object.keys(nodeRestfulErrors).forEach(attributeError =>{
+        errors.push(nodeRestfulErrors[attributeError].message);
+    });
     return errors;    
 }
 

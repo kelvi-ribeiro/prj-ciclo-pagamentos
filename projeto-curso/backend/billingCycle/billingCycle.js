@@ -17,7 +17,7 @@ const restful = require('node-restful'),
           month:{type:Number,min:1,max:12,required:true},
           year:{type:Number,min:1970,max:2100,required:true},
           credits:[creditSchema],
-          debits:[debtSchema]
+          debts:[debtSchema]
       });
 
       module.exports = restful.model('BillingCycle',billingCycleSchema);

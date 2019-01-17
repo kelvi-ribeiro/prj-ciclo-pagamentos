@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const watch = require('gulp-watch');
-const webserver = require('gulp-watch');
+const webserver = require('gulp-webserver');
 
 gulp.task('watch',()=>{
     watch('app/**/*.html',gulp.start('app.html'))

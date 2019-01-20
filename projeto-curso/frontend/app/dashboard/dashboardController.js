@@ -11,7 +11,7 @@ angular.module('primeiraApp').controller('DashboardCtrl', [
         const {credit = 0, debt = 0} = response.data
         $scope.credit = credit
         $scope.debt = debt
-        $scope.total = credit - debt
+        $scope.total = credit - debt        
       })
     }
   

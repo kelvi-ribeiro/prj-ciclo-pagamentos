@@ -33,6 +33,16 @@
             vm.billingCycle = billingCycle;
             tabs.show(vm,{tabDelete:true}); 
         }
+        vm.delete = function(){
+            const deleteUrl = `${url}/${vm.billingCycle._id}`;
+            $http.delete(deleteUrl,vm.billingCycle)
+            .then(function(response){
+                vm.refresh();
+                msgs.addSuccess('Operação Realizada com sucesso')
+            }).catch(function(response){
+                msgs.addError(response.data.errors)
+            })
+        }
         vm.refresh();
     }
 })()

@@ -33,7 +33,7 @@
         }
         vm.showTabDelete = function(billingCycle) {
             vm.billingCycle = billingCycle;
-            vm.refresh();
+            vm.calculateValues();
             tabs.show(vm,{tabDelete:true}); 
         }
         vm.update = function(){

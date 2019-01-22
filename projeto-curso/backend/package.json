@@ -10,9 +10,11 @@
   "author": "Kelvi Martins Ribeiro",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "express-query-int": "^3.0.0",
+    "jsonwebtoken": "^7.3.0",
     "lodash": "^4.17.11",
     "mongoose": "^5.4.3",
     "node-restful": "^0.2.6",

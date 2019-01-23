@@ -12,10 +12,10 @@ module.exports = function (server) {
 	protectedApi.use(auth)
 
 	// rotas da API
-	const billingCycleService = require('../api/billingCycle/billingCycleService')
+	const billingCycleService = require('../billingCycle/billingCycleService')
 	billingCycleService.register(protectedApi, '/billingCycles')
 
-	const billingSummaryService = require('../api/billingSummary/billingSummaryService')
+	const billingSummaryService = require('../billingSummary/billingSummaryService')
 	protectedApi.route('/billingSummary').get(billingSummaryService.getSummary)
 
 	/*
@@ -24,7 +24,7 @@ module.exports = function (server) {
 	const openApi = express.Router()
 	server.use('/oapi', openApi)
 
-	const AuthService = require('../api/user/authService')
+	const AuthService = require('../user/authService')
 	openApi.post('/login', AuthService.login)
 	openApi.post('/signup', AuthService.signup)
 	openApi.post('/validateToken', AuthService.validateToken)

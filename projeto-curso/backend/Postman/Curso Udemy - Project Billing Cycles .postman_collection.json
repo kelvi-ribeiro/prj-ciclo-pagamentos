@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "67b81f24-ee4e-4c6d-8557-f94fd0017eee",
+		"name": "Curso Udemy - Project Billing Cycles ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LIST Billing Cycles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3003/api/billingCycles",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"billingCycles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INSERT One Billing Cycle",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Janeiro/17",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2017",
+							"type": "text"
+						},
+						{
+							"key": "credits[0][name]",
+							"value": "Salário Empresa",
+							"type": "text"
+						},
+						{
+							"key": "credits[0][value]",
+							"value": "6500",
+							"type": "text"
+						},
+						{
+							"key": "credits[1][name]",
+							"value": "Salario Professor",
+							"type": "text"
+						},
+						{
+							"key": "credits[1][value]",
+							"value": "2700",
+							"type": "text"
+						},
+						{
+							"key": "debts[0][name]",
+							"value": "Telefone",
+							"type": "text"
+						},
+						{
+							"key": "debts[0][value]",
+							"value": "89.56",
+							"type": "text"
+						},
+						{
+							"key": "debts[0][status]",
+							"value": "PAGO",
+							"type": "text"
+						},
+						{
+							"key": "debts[1][name]",
+							"value": "Condominio",
+							"type": "text"
+						},
+						{
+							"key": "debts[1][value]",
+							"value": "729",
+							"type": "text"
+						},
+						{
+							"key": "debts[1][status]",
+							"value": "AGENDADO",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3003/api/billingCycles",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"billingCycles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET One By ID Billing Cycle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3003/api/billingCycles/5c3c04a3df0c2b4d92ad12e0",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"billingCycles",
+						"5c3c04a3df0c2b4d92ad12e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE One By ID Billing Cycle",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Março/2017",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2017",
+							"type": "text"
+						},
+						{
+							"key": "credits[0][name]",
+							"value": "Salário Empresa",
+							"type": "text"
+						},
+						{
+							"key": "credits[0][value]",
+							"value": "6500",
+							"type": "text"
+						},
+						{
+							"key": "credits[1][name]",
+							"value": "Salario Professor",
+							"type": "text"
+						},
+						{
+							"key": "credits[1][value]",
+							"value": "2700",
+							"type": "text"
+						},
+						{
+							"key": "debits[0][name]",
+							"value": "Telefone",
+							"type": "text"
+						},
+						{
+							"key": "debits[0][value]",
+							"value": "89.56",
+							"type": "text"
+						},
+						{
+							"key": "debits[0][status]",
+							"value": "PAGO",
+							"type": "text"
+						},
+						{
+							"key": "debits[1][name]",
+							"value": "Condominio",
+							"type": "text"
+						},
+						{
+							"key": "debits[1][value]",
+							"value": "729",
+							"type": "text"
+						},
+						{
+							"key": "debits[1][status]",
+							"value": "AGENDADO",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3003/api/billingCycles/5c3c04a3df0c2b4d92ad12e0",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"billingCycles",
+						"5c3c04a3df0c2b4d92ad12e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE One By ID Billing Cycle Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3003/api/billingCycles/5c4504bec5548d0a504d9fc5",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"billingCycles",
+						"5c4504bec5548d0a504d9fc5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Total registered number of Billing Cycles Re",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3003/api/billingCycles/count",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"billingCycles",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Summary Payments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3003/api/billingSummary",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"billingSummary"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

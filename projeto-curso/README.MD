@@ -1,5 +1,5 @@
 ![fluxo-aplicacao](https://imgur.com/dbjTNOQ.gif)
-# prj-clico-pagamentos
+# prj-ciclo-pagamentos
 Projeto de Ciclo de pagamentos Usando API NodeJs integrada com client frontend e MongoDB como banco no Curso da Udemy de NodeJS, ministrada pelo Instrutor  [Leonardo Leitão](https://www.udemy.com/user/leonardomouraleitao/) - [Link do Curso](https://www.udemy.com/mean-primeira-aplicacao-do-zero/)
 
 # Imagens
@@ -17,10 +17,10 @@ Projeto de Ciclo de pagamentos Usando API NodeJs integrada com client frontend e
 ![interface-listagem-ciclos](https://imgur.com/OQW2iaN.png)
 
 #### Interface de inclusão de um novo ciclo de pagamentos:
-![interface-inclusao-clico](https://imgur.com/WmquZim.png)
+![interface-inclusao-ciclo](https://imgur.com/WmquZim.png)
 
 #### Interface de edição de um novo ciclo de pagamentos:
-![interface-edicao-clico](https://imgur.com/pWMALtI.png)
+![interface-edicao-ciclo](https://imgur.com/pWMALtI.png)
 
 #### Interface de exclusão de um novo ciclo de pagamentos:
-![interface-exclusao-clico](https://imgur.com/sBIUAp7.png)
+![interface-exclusao-ciclo](https://imgur.com/sBIUAp7.png)

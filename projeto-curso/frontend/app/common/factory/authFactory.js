@@ -35,9 +35,16 @@
                 }).catch(function (resp) {
                     if (callback) callback(resp.data.errors, null)
                 })
-        }       
+        }      
+        
+        function logout(callback) {
+            user = null
+            localStorage.removeItem(consts.userKey)
+            $http.defaults.headers.common.Authorization = ''
+            if (callback) callback(null)
+        }
 
-        return { signup, login }
+        return { signup, login,logout,getUser }
     }
 
 })()

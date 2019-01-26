@@ -42,7 +42,9 @@
             localStorage.removeItem(consts.userKey)
             $http.defaults.headers.common.Authorization = ''
             if (callback) callback(null)
-        }        function validateToken(token, callback) {
+        }
+
+        function validateToken(token, callback) {
             if (token) {
                 $http.post(`${consts.oapiUrl}/validateToken`, { token })
                     .then(resp => {

@@ -8,9 +8,8 @@ angular.module('primeiraApp').config([
       }).state('billingCycle', {
         url: "/billingCycles?page",
         templateUrl: "billingCycle/tabs.html"
-      })
-  
-      $urlRouterProvider.otherwise('/dashboard')
+      })  
+      
   }])
   .run([
     '$rootScope',
